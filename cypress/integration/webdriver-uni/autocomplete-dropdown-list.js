@@ -31,7 +31,9 @@ describe("Verify Autocomplete dropdown lists via webdriveruni", () => {
                 const prod = $el.text()
                 const productToSelect = 'Grapes';
                 if (prod === productToSelect) {
-                    $el.click();
+                    //click command depriciated with this version of cypress
+                    //$el.click();
+                    $el.trigger("click")
                     cy.get('#submit-button').click();
                     cy.url().should('include', productToSelect)
                 }
