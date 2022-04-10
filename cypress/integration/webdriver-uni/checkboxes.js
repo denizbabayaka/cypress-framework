@@ -29,9 +29,12 @@ describe("Verify checkboxes via webdriveruni", () => {
     it("Check and validate checkbox", () => {
         cy.visit("https://webdriveruniversity.com");
         cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({ force: true })
+        //This approach is working
+        //cy.get("input[type='checkbox']").check(["option-1", "option-2", "option-3", "option-4"]).should('be.checked')
+
         var i = 0;
         for (i = 1; i < 5; i++) {
-            cy.get('input[value="option-' + i + '"]').check()
+            cy.get('input[value="option-' + i + '"]').check().should('be.checked')
             cy.get('input[value="option-' + i + '"]').uncheck()
     
             
