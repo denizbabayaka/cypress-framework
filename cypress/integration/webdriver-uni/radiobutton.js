@@ -3,9 +3,13 @@
 
 
 describe("Verify radiobuttons via webdriveruni", () => {
-    it("Check specific radiobuttons", () => {
+    before(function () {
         cy.visit("https://webdriveruniversity.com");
         cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({ force: true })
+
+    })
+    it("Check specific radiobuttons", () => {
+
         // // It will check the first radiobutton and then validate 
         // cy.get('#radio-buttons').find('[type="radio"]').first().check().should('be.checked')
         // // it will find the second index and check it
@@ -29,14 +33,12 @@ describe("Verify radiobuttons via webdriveruni", () => {
     })
 
     it.only("Validate the specific state of radio buttons", () => {
-        cy.visit("https://webdriveruniversity.com");
-        cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({ force: true })
 
         cy.get("[value='lettuce']").should('not.be.checked')
         cy.get("[value='pumpkin']").should('be.checked')
 
         cy.get("[value='lettuce']").check()
-        cy.get("[value='lettuce']").should('be.checked') 
+        cy.get("[value='lettuce']").should('be.checked')
         cy.get("[value='pumpkin']").should('not.be.checked')
         cy.get("[value='cabbage']").should('be.disabled')
     });

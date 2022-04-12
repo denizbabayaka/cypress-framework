@@ -2,7 +2,17 @@
 
 
 
+
+
 describe("Test Contact Us form via WebdriverUni", () => {
+    // this before function will get data from example file and assign it data varible
+    //and we initialize our json file 
+    before(function() {
+        cy.fixture('example').then(function(data) {
+            //this.data = data; // this do not work 
+            globalThis.data = data;
+        })
+    })
     it("Should be able to submit a succesfull submission via contact us form",() => {
        //cy.visit("https://webdriveruniversity.com/Contact-Us/contactus.html");
        cy.visit("https://webdriveruniversity.com");
@@ -11,9 +21,9 @@ describe("Test Contact Us form via WebdriverUni", () => {
        cy.title().should('include','WebDriver | Contact Us')
        cy.url().should('include','contactus')
        //cy.get('#contact-us').click({force:true})
-       cy.get('[name="first_name"]').type("Deniz")
-       cy.get('[name="last_name"]').type("Babayaka")
-       cy.get('[name="email"]').type("deniz@gmail.com")
+       cy.get('[name="first_name"]').type(data.first_name)//this logic comes from before function above
+       cy.get('[name="last_name"]').type(data.last_name)
+       cy.get('[name="email"]').type(data.email)
        cy.get('textarea.feedback-input').type("This is a test")
        cy.get('[type="submit"]').click()
        cy.get('h1').should('have.text','Thank You for your Message!')
