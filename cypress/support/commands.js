@@ -30,9 +30,9 @@ Cypress.Commands.add("selectProduct", productName => {
 
 // This method will get all the products assign to $el var and then itarate through all the products
 // if the condition matchs then it will click on that product
-Cypress.Commands.add("addProductToBasket", productname => {
+Cypress.Commands.add("addProductToBasket", productName => {
     cy.get(".fixed_wrapper .prdocutname").each(($el, index, $list) => {
-        if ($el.text() === productname) {
+        if ($el.text() === productName) {
             cy.log($el.text())
             cy.get('.productcart').eq(index).click();
         }

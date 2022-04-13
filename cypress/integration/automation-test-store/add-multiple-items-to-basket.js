@@ -4,7 +4,8 @@
 describe("Add multiple items to basket", () => {
     before(function () {
         
-        //This data  inside this method coming from product.json file stored as an Array
+        //This fixture method will assign whatever  inside the array at  product.json file
+        // to the  data variable 
         cy.fixture('product').then(function (data) {
 
             globalThis.data = data;
@@ -16,11 +17,11 @@ describe("Add multiple items to basket", () => {
         cy.get("a[href*='product/category&path=']").contains("Hair Care").click();
       });
     it("Log information of all hair care products", () => {
-        //This will iterate through the array productName array inside the product.json file
+        //This will iterate through the array productName1 array inside the product.json file
         //and assign all of them  to the variable element 
         
         
-        globalThis.data.productname.forEach(function (element) {
+        globalThis.data.productName1.forEach(function (element) {
             // and then we will pass it as an argument to addProductTobasket method coming from
             //cypress commands.js file 
             cy.addProductToBasket(element);
