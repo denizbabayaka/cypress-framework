@@ -5,8 +5,10 @@ describe("Verify checkboxes via webdriveruni", () => {
     //before all tests in the block
     beforeEach(function () {
         // "/" is indicating cypress.json baseUrl  
-        cy.visit("/");
-        cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({ force: true })
+        //cy.visit("/")
+        //This method is coming from commands.json file as a custom command 
+        
+        cy.navigateTo_WebdriverUni_Checkboxes();
     })
 
     it("Check and validate checkbox", () => {
