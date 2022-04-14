@@ -27,7 +27,7 @@ describe("Validate webdriveruni hompage links", () => {
         // target has to be at the same line with id inside DOM
         cy.get('#to-do-list').invoke('removeAttr', 'target').click({ force: true })
         cy.go('back')
-        
+
 
 
 

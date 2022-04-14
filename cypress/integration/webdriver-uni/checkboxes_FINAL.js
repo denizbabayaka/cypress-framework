@@ -7,7 +7,7 @@ describe("Verify checkboxes via webdriveruni", () => {
         // "/" is indicating cypress.json baseUrl  
         //cy.visit("/")
         //This method is coming from commands.json file as a custom command 
-        
+
         cy.navigateTo_WebdriverUni_Checkboxes();
     })
 

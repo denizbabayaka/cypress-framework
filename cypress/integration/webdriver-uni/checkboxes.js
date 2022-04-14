@@ -20,11 +20,11 @@ describe("Verify checkboxes via webdriveruni", () => {
 
 
 
-        })
-        
-        
+    })
 
-    
+
+
+
 
     it("Check and validate checkbox", () => {
         cy.visit("https://webdriveruniversity.com");
@@ -36,16 +36,16 @@ describe("Verify checkboxes via webdriveruni", () => {
         for (i = 1; i < 5; i++) {
             cy.get('input[value="option-' + i + '"]').check().should('be.checked')
             cy.get('input[value="option-' + i + '"]').uncheck()
-    
-            
-            
-            
-            
-            
+
+
+
+
+
+
 
 
         }
 
     })
 
-    })
+})

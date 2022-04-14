@@ -46,7 +46,7 @@ describe("Handle js alerts", () => {
 
         const stub = cy.stub();
         cy.on('window:confirm', stub);
-        
+
 
         cy.get('#button4').click().then(() => {
             //stub will get all the messagees inside the alert and based on the getCall(0) index

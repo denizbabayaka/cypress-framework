@@ -10,7 +10,7 @@ describe("Traversing DOM elements in Cypress", () => {
 
   it("closest() to validate the closest ancestor DOM element", () => {
     cy.get('.traversal-badge').closest('ul').should('have.class', 'list-group');
-    
+
   });
 
   it("eq() to retrieve a specific element based on index", () => {
@@ -20,7 +20,7 @@ describe("Traversing DOM elements in Cypress", () => {
 
   it("filter() to retrieve DOM elements that match a specific selector", () => {
     cy.get('.btn-group-toggle >*').filter('.active').should('contain', 'Button-1');
-    
+
   });
 
   it("find() to retrieve DOM elements of a given selector", () => {
@@ -47,7 +47,7 @@ describe("Traversing DOM elements in Cypress", () => {
   });
 
   it("parent() To get parent DOM element of elements", () => {
-    cy.get('.traversal-mark').parent().should('contain','Lorem ipsum dolor sit amet')
+    cy.get('.traversal-mark').parent().should('contain', 'Lorem ipsum dolor sit amet')
   });
 
   it("parents() to get parents DOM element of elements", () => {

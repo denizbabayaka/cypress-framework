@@ -1,8 +1,8 @@
 {
   "name": "Using fixtures to repsesent data",
   "email": "deniz@webdriverini.com",
-  "body": "Fixtures are a great way to mock data for responses to routes",
-  "first_name": "Deniz",
+  "message": "Fixtures are a great way to mock data for responses to routes",
+  "first_name": "Hamit",
   "last_name": "Babayaka"
   
 

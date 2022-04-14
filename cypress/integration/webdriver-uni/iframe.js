@@ -14,7 +14,7 @@ describe("Handling IFrames & Modals", () => {
             cy.wrap(body).as('iframe')
             // we are  inside the iframe now and click on the button
             cy.get('@iframe').find('#button-find-out-more').click()
-          
+
             cy.get('@iframe').find('#myModal').as('modal')
             // get the text of the open window inside the alert and verify it is equal to the text we are expecting
             cy.get('@modal').should(($expectedText) => {
@@ -22,14 +22,14 @@ describe("Handling IFrames & Modals", () => {
                 const text = $expectedText.text()
                 // and make assertion
                 expect(text).to.include('Welcome to webdriveruniversity.com we sell')
-               
+
             })
 
             cy.get('@modal').contains('Close').click()
 
         })
 
-        
+
 
 
     });
