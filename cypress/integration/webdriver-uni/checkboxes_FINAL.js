@@ -4,7 +4,8 @@ describe("Verify checkboxes via webdriveruni", () => {
     //Since it is repepetive we can use beforeEach function to do the same thing
     //before all tests in the block
     beforeEach(function () {
-        cy.visit("https://webdriveruniversity.com");
+        // "/" is indicating cypress.json baseUrl  
+        cy.visit("/");
         cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({ force: true })
     })
 

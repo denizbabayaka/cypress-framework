@@ -26,6 +26,7 @@ describe("Add multiple items to basket", () => {
             //cypress commands.js file 
             cy.addProductToBasket(element);
         })
+        cy.get('.dropdown-toggle > .fa').click();
      
     });
 });
