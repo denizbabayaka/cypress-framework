@@ -19,7 +19,7 @@ describe("Test Contact Us form via WebdriverUni", () => {
   });
 
   beforeEach(function () {
-    //Those methods are coming from Homepage_PO.js as a common methods
+    //Those methods are coming from Homepage_PO.js and Contact_Us_PO.jsas a common methods
     homepage_PO.visitHomePage();
     homepage_PO.clickOn_ContactUs_Button();
   });
