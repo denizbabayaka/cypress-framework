@@ -7,7 +7,8 @@
 
     "env": {
         "webdriveruni_homepage": "http://www.webdriveruniversity.com/",
-        "first_name": "sarah"
+        "first_name": "sarah",
+        "automationteststore_homepage": "https://www.automationteststore.com/"
     
 }
 

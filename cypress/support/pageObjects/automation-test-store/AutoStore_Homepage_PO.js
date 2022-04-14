@@ -1,8 +1,18 @@
 class AutoStore_Homepage_PO {
 
+
+    accessHomePage() {
+        //This env  variable is coming from cypress.json file
+
+        cy.visit(Cypress.env("automationteststore_homepage"));
+        cy.get("a[href*='product/category&path=']").contains("Hdir Care").click();
+
+        
+
+
     
     }
 
 
-// HomePage_PO.js names should be mayched this code will export our class globally
+
 export default  AutoStore_Homepage_PO;
