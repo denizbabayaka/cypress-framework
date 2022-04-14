@@ -20,8 +20,9 @@ describe("Add multiple items to basket", () => {
     beforeEach(function () {
         // cy.visit("https://automationteststore.com/");
         // cy.get("a[href*='product/category&path=']").contains("Hair Care").click();
-        //Instead of hard coding we will use our custom command
+        //Instead of hard coding we will use our custom methods
         autoStore_Homepage_PO.accessHomePage();
+        autoStore_Homepage_PO.clickOn_HairCare_Link(); 
     });
     it("Log information of all hair care products", () => {
         //This will iterate through the array productName1 array inside the product.json file
