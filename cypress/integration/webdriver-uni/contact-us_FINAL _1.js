@@ -5,6 +5,8 @@ import Contact_Us_PO from '../../support/pageObjects/webdriver-uni/Contact_Us_PO
 /// <reference types="cypress" />
 
 describe("Test Contact Us form via WebdriverUni", () => {
+  //for this specific test time will be overidden to 200000 inside our settings 
+  Cypress.config('defaultCommandTimeout', 20000);
   //Those methods are coming from Homepage_PO.js and Contact_Us_PO.js as a common methods
   //and we initilize the constructor of Homepage.js and Contact_Us_PO.js classes
   const homepage_PO = new Homepage_PO();
@@ -21,7 +23,10 @@ describe("Test Contact Us form via WebdriverUni", () => {
   beforeEach(function () {
     //Those methods are coming from Homepage_PO.js and Contact_Us_PO.jsas a common methods
     homepage_PO.visitHomePage();
+    cy.wait(3000);
     homepage_PO.clickOn_ContactUs_Button();
+    //at that point it will pause the test we can manually resume it
+    //cy.pause();
   });
 
   it("Should be able to submit a successful submission via contact us form", () => {

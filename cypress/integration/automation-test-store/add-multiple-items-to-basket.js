@@ -5,6 +5,7 @@ import AutoStore_Haircare_PO from '../../support/pageObjects/automation-test-sto
 
 
 describe("Add multiple items to basket", () => {
+    // we are initalizing the page objects 
     const autoStore_Homepage_PO = new AutoStore_Homepage_PO();
     const autoStore_HairCare_PO = new AutoStore_Haircare_PO();
 
@@ -38,6 +39,8 @@ describe("Add multiple items to basket", () => {
         // })
         // cy.get('.dropdown-toggle > .fa').click();
 
+        // This line sipmlifies our code with commond method which is coming from
+        //AutoStore_Haircare_PO.js Page object file
         autoStore_HairCare_PO.addHairCareProductsToBasket();
 
 

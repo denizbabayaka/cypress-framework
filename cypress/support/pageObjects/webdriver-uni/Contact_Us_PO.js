@@ -5,7 +5,8 @@ class Contact_Us_PO {
         cy.get ('[name="email"]').type(email)
         cy.get('textarea.feedback-input').type(comment)
         cy.get('[type="submit"]').click();
-        cy.get ($selector).contains(textToLocate)
+        //if assertion not met expectation incase it will wait 10 sec and then fail
+        cy.get ($selector).contains(textToLocate, {timeout: 10000})
 
     }
 
