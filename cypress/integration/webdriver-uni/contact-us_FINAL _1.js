@@ -17,6 +17,8 @@ describe("Test Contact Us form via WebdriverUni", () => {
     cy.fixture("example").then(function (data) {
       //this.data = data;
       globalThis.data = data;
+      //This code will size the screen to the size of the device
+      //cy.viewport(550, 750);
     });
   });
 
@@ -38,6 +40,8 @@ describe("Test Contact Us form via WebdriverUni", () => {
   });
 
   it("Should not be able to submit a successful submission via contact us form as all fields are required", () => {
-    contact_Us_PO.contactForm_Submission(data.first_name, data.last_name," ", "How can I learn Cypress?", "body", "Error: Invalid email address")
+    contact_Us_PO.contactForm_Submission(data.first_name, data.last_name, " ", "How can I learn Cypress?", "body", "Error: Invalid email address")
   });
 });
+// This code is for running from command line and it will delete previous screenshots b
+//./node_modules/.bin/cypress run --spec cypress/integration/webdriver-uni/contact-us_FINAL.js

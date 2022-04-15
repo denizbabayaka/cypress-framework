@@ -21,6 +21,9 @@ describe("Add multiple items to basket", () => {
 
     })
     beforeEach(function () {
+
+        cy.clearLocalStorage();
+        cy.clearCookies();
         // cy.visit("https://automationteststore.com/");
         // cy.get("a[href*='product/category&path=']").contains("Hair Care").click();
         //Instead of hard coding we will use our custom methods

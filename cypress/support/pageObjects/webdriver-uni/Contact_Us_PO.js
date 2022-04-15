@@ -8,6 +8,7 @@ class Contact_Us_PO {
         //if assertion not met expectation incase it will wait 10 sec and then fail
         cy.get ($selector).contains(textToLocate, {timeout: 10000})
         //this will create a screenshot of the page with test name
+        //be careful if the above tetst fail it will not create a screenshot 
         cy.screenshot();
         //this will create a screenshot of the page with custom name inside the screenshots folder
         cy.screenshot('contact-us-form-submission-success');
