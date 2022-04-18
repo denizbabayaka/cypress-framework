@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-04-18T15:28:40.097Z",
+    "end": "2022-04-18T15:28:43.875Z",
+    "duration": 3778,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8ab3260f-a7e1-45c3-a8a0-993eb9fa9775",
+      "title": "",
+      "fullFile": "cypress/integration/webdriver-uni/js-alert.js",
+      "file": "cypress/integration/webdriver-uni/js-alert.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d611f24e-63a5-474e-9579-45267214dec7",
+          "title": "Handle js alerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate js confirm alert using a stub",
+              "fullTitle": "Handle js alerts Validate js confirm alert using a stub",
+              "timedOut": null,
+              "duration": 1638,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://webdriveruniversity.com\");\ncy.get('#popup-alerts').invoke('removeAttr', 'target').click({\n  force: true\n});\nconst stub = cy.stub();\ncy.on('window:confirm', stub);\ncy.get('#button4').click().then(() => {\n  //stub will get all the messagees inside the alert and based on the getCall(0) index\n  // it will return the message we want to capture and verify to.be .calledWith method\n  expect(stub.getCall(0)).to.be.calledWith('Press a button!');\n}).then(() => {\n  return true;\n}).then(() => {\n  cy.get('#confirm-alert-text').contains('You pressed OK!');\n});",
+              "err": {},
+              "uuid": "79ae3343-e093-49eb-a381-a709745fd5a7",
+              "parentUUID": "d611f24e-63a5-474e-9579-45267214dec7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "79ae3343-e093-49eb-a381-a709745fd5a7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1638,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
