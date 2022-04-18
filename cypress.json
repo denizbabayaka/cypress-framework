@@ -9,5 +9,11 @@
     "first_name": "sarah",
     "automationteststore_homepage": "https://www.automationteststore.com/"
   },
-  "projectId": "i8t2qj"
+  "projectId": "i8t2qj",
+  
+    "reporterEnabled": "spec, mocha-junit-reporter",
+    "mochaJunitReporterReporterOptions": {
+    "mochaFile": "cypress/results/junit/results-[hash].xml"
+     
+    }
 }
