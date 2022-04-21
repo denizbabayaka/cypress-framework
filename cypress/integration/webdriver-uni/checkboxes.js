@@ -3,15 +3,7 @@
 
 
 describe("Verify checkboxes via webdriveruni", () => {
-    it("Check and validate checkbox", {
-        //This method will run again if the test fails
-        retries: {
-            runMode: 2,
-            openMode: 1
-
-        }
-
-    }, () => {
+    it("Check and validate checkbox",  () => {
         cy.visit("https://webdriveruniversity.com");
         cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({ force: true })
         // it will check the first checkbox and then validate it in line below
