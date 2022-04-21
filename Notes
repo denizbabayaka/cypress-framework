@@ -1,0 +1,201 @@
+1-In Selenium there is a layer which is called web  driver comminicates with browser via API protocol by sending
+selenium commands to browser,it is working outside of the browser
+2-In Cypress is comminicating directly with the browser by rendering object elements inside DOM 
+3-Easy to Setup: npm install cypress --save-dev
+-- np init ==>set up process inside folder 
+--$ ./node_modules/.bin/cypress open ==> open cypress
+
+4.cypress.json file enables us to configure settings
+node_modules : used to
+ house dependencies
+     (Packages).
+
+cypress.json : Created in the
+projects root directory, enables
+us to change default settings.
+
+index.js : The first file which cypress
+investigates; any imports, additional
+libraries, event listeners, changes to
+cypress default behaviour, even the
+      ability to add hooks etc.
+
+commands.js : Used to store
+common / custom commands
+(Functions), even the ability to
+override Cypress functions.
+
+integration : The main folder where we
+store our test files, Cypress test runner
+  will look into this folder inorder to
+           locate test file(s).
+
+fixtures : Where we keep our test data
+objects, mocked objects and any other
+  data which we need for our tests
+ (In most cases will be JSON files).
+
+
+5-MOCHA
+FUNCTION CALLS
+MOCHA - Comes pre bundled with two function calls which are describe() and it()
+both have their own specific purpose.e
+• describe() is simply a way to group our tests in Mocha; basically enabling us to
+group a series of tests together. describe() takes two arguments: first argument:
+the name of the test group and the second argument is simply the call-back
+function (Simply put: A call-back is a function that is to be executed after another
+function has finished executing- hence the name 'call back')
+
+it() is way to describe each individual test case which is nested inside the
+describe() block. it() should be described in way that makes sense for the given
+test case. describe is used to define and group tests, it is used to define individual
+test cases.
+
+6-XPATH
+// => search from anywhere inside gthe DOM 
+* => do not care is div or a 
+//h2[text()='Contact Us']
+(//8[text()='Contact Us'])[2] =>selects the secon element 
+//h2[starts-with(text(), 'Con')]
+//h2[starts-with(text(), 'Con')]/following-sibling::ul/* 
+
+--./node_modules/.bin/cypress run => run all the test suite
+-- ./node_modules/.bin/cypress run --browser chrome => run with chrome 
+--./node_modules/.bin/cypress run --spec cypress/integration/automation-test-store/contact-us.js =>run specific test
+
+7-SYNCHRONOUS
+Code executes one at atime based on the sequence 
+
+8-Css Selectors
+.classname=>defines class name selector 
+.index => will match any element that has a class of "index"
+Syntax: #idname
+Example: #toc => will match the element that has the ID "toc"..
+
+9-page object model is a design pattern which ebable us create further abstraction in our framework basically we are hiding the implementation just 
+showing the functionality in our tests and instead of writing repetetive codes in oour tests we gather them under specific files
+which we need all the elements and methods that interact with those elements an d use them in our tests,this goiives us code simplicity
+and easy to maintain our framework in case of any element or environment changes inside our application 
+
+we extract main logic inside our test and put them inside pageobject class and later acsess them with creating oobject of those 
+classes and implement the methods inside our tests,if there is any update hs to be made inside our website we can easily 
+amend our changes inside our pageobject classes without any damage tou our actual tests 
+
+10-Constructor in a Class is  a method  is like a lock of the house, with new method we create an object and this object becomes key
+of this lock and enables us to initilaze all the class variables and methods and variables inside the scope of variable 
+so we can implement those methods in our new class with the created object ,object will get reference from the super class 
+
+11-open dashboard from cli
+./node_modules/.bin/cypress run --spec cypress/integration/webdriver-uni/checkboxes.js --record --key <get from cyi settingd>
+
+12- run specifi test 
+./node_modules/.bin/cypress run --spec cypress/integration/webdriver-uni/checkboxes.js 
+npx cypress run --browser chrome --headed --spec cypress/integration/webdriver-uni/contact-us.js ==> run with npxx module 
+
+13-Based on the scriprs that we passed to the package.json we can run the tests with that options 
+npm  run triggerAllTests-headless   (refer the cods below,based on the tittles this actions will be implemented )
+
+   "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-headed": "npx cypress run --headed",
+    "triggerAllTests-chrome": "npx cypress run --browser chrome",
+    "triggerAllTests-dashboard": "npx cypress run --record --key 0cca5032-798f-468c-bc2a-558e73a72797",
+    "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/integration/webdriver-uni/*",
+    "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
+    "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
+    "delete-results": "rm -rf cypress/results/* || true"
+
+14-npx cypress open --config-file cypress/config/staging.json => to open cypress with new configurtion file 
+if we want to run our test with diffrent kind of variables in a difffrent environment we have to create a new config file 
+with the new values
+
+  - npx cypress run --spec cypress/integration/webdriver-uni/checkboxes_FINAL.js --config-file cypress/config/stagin
+g.json --headed => run specific test with new connfig file giving as aparameter 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
