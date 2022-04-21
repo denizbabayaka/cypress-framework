@@ -3,7 +3,15 @@
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 30000,
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
   "ignoreTestFiles": "**/other/*",
+  "screenshotsFolder": "cypress/screenshots",
+  "videosFolder": "cypress/videos/testEExucitionVideos",
+  "retries": {
+    "runMode": 1,
+    "openMode": 1
+  },
   "env": {
     "webdriveruni_homepage": "http://www.webdriveruniversity.com/",
     "first_name": "sarah",
@@ -12,6 +20,6 @@
   "projectId": "i8t2qj",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
-  "configFile": "reporter-config.json"
-}
+    "configFile": "reporter-config.json"
+  }
 }

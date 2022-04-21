@@ -109,7 +109,17 @@ if we want to run our test with diffrent kind of variables in a difffrent enviro
 with the new values
 
   - npx cypress run --spec cypress/integration/webdriver-uni/checkboxes_FINAL.js --config-file cypress/config/stagin
-g.json --headed => run specific test with new connfig file giving as aparameter 
+g.json --headed => run specific test with new connfig file giving custom config.json file as a parameter  as a parameter 
+
+   -if we want to trigger all our tests with new confiig file we can use this code
+   npm run triggerAllTests-staging => this coming from package.json
+
+   15- "retries": {
+"runMode": 1,
+"openMode": 1
+}, ==> this is to retry the test if it fails (coming from cypress.json)
+checkboxess.js => this is the test file which we want to retry 
+
 
 
 
