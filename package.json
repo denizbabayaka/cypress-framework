@@ -19,7 +19,7 @@
     "cypress-regression-pack":"npm run delete-results && npm run delete-mochawesome-report && npm run triggerAllTests-headless && npm run mochawesome-merge",
     "delete-results-mochawesome":"npm run delete-results && npm run delete-mochawesome-report",
     "triggerAllTests-staging":"npx cypress run --cconfig-file cypress/config/staging.json",
-    "cypress-multi-browser":"npm  run triggerAllTests-autostore -- --browser electron"
+    "cypress-multi-browser":"npm  run triggerAllTests-autostore -- --browser electron --headed & npm  run triggerAllTests-autostore -- --browser edge --headed"
 
 
 

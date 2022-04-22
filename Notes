@@ -120,6 +120,9 @@ g.json --headed => run specific test with new connfig file giving custom config.
 }, ==> this is to retry the test if it fails (coming from cypress.json)
 checkboxess.js => this is the test file which we want to retry 
 
+16- multi browser testing
+ "cypress-multi-browser":"npm  run triggerAllTests-autostore -- --browser electron --headed & npm  run triggerAllTests-autostore -- --browser edge --headed"
+
 
 
 

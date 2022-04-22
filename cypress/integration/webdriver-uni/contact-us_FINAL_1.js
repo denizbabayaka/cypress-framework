@@ -1,6 +1,7 @@
 //This ../../ will go 2 directory up from the current directory
 import Homepage_PO from '../../support/pageObjects/webdriver-uni/Homepage_PO'
 import Contact_Us_PO from '../../support/pageObjects/webdriver-uni/Contact_Us_PO'
+import { is } from 'cypress/types/bluebird';
 
 /// <reference types="cypress" />
 
@@ -40,7 +41,13 @@ describe("Test Contact Us form via WebdriverUni", () => {
   });
 
   it("Should not be able to submit a successful submission via contact us form as all fields are required", () => {
-    contact_Us_PO.contactForm_Submission(data.first_name, data.last_name, " ", "How can I learn Cypress?", "body", "Error: Invalid email address")
+    //Based on the condition test will run accordingly browser  
+    if(Cypress,isBrowser('firefox')){
+
+     }else{
+      contact_Us_PO.contactForm_Submission(data.first_name, data.last_name, " ", "How can I learn Cypress?", "body", "Error: Invalid email address")
+     }
+   
   });
 });
 // This code is for running from command line and it will delete previous screenshots b
