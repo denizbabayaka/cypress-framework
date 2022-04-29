@@ -17,19 +17,16 @@
     "delete-results": "rm -rf cypress/results/* || true",
     "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
     "delete-mochawesome-report": "rm -rf mochawesome-report/* || true",
-    "cypress-regression-pack":"npm run delete-results && npm run delete-mochawesome-report && npm run triggerAllTests-headless && npm run mochawesome-merge",
-    "delete-results-mochawesome":"npm run delete-results && npm run delete-mochawesome-report",
-    "triggerAllTests-staging":"npx cypress run --cconfig-file cypress/config/staging.json",
-    "cypress-multi-browser":"npm  run triggerAllTests-autostore -- --browser electron --headed & npm  run triggerAllTests-autostore -- --browser edge --headed"
-
-
-
-
+    "cypress-regression-pack": "npm run delete-results && npm run delete-mochawesome-report && npm run triggerAllTests-headless && npm run mochawesome-merge",
+    "delete-results-mochawesome": "npm run delete-results && npm run delete-mochawesome-report",
+    "triggerAllTests-staging": "npx cypress run --cconfig-file cypress/config/staging.json",
+    "cypress-multi-browser": "npm  run triggerAllTests-autostore -- --browser electron --headed & npm  run triggerAllTests-autostore -- --browser edge --headed"
   },
   "author": "Deniz Babayaka",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^8.4.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-multi-reporters": "^1.5.0",
     "cypress-xpath": "^1.6.2",
@@ -38,5 +35,8 @@
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
