@@ -5,7 +5,6 @@
   "pageLoadTimeout": 30000,
   "viewportHeight": 1080,
   "viewportWidth": 1920,
-  "ignoreTestFiles": "**/other/*",
   "screenshotsFolder": "cypress/screenshots",
   "videosFolder": "cypress/videos/testEExucitionVideos",
   "retries": {
