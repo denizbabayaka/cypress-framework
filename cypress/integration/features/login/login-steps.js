@@ -32,4 +32,6 @@ Then("I should be presented with the following message {word} {word}", (message,
     //This will check if the stub is called or not
     const expectedMessage = message +" "+message2;
     cy.log(expectedMessage) //This will log the message in the console
-})
+    cy.log(stub.getCall(0)) //This will log the stub message in the console
+    expect(stub.getCall(0)).to.be.calledWith(expectedMessage)
+})   
