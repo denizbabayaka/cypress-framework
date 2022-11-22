@@ -8,11 +8,11 @@
     "triggerAllTests-headed": "npx cypress run --headed",
     "triggerAllTests-chrome": "npx cypress run --browser chrome",
     "triggerAllTests-dashboard": "npx cypress run --record --key 0cca5032-798f-468c-bc2a-558e73a72797",
-    "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/integration/webdriver-uni/* --headed",
-    "triggerAllTests-autostore": "npx cypress run --spec cypress/integration/automation-test-store/*",
-    "triggerAllTests-autostore-dashboard": "npx cypress run --spec cypress/integration/automation-test-store/* --headed --record --key 0cca5032-798f-468c-bc2a-558e73a72797 --parallel --browser chrome --headed",
-    "triggerAllTests-webdriveruni-dashboard": "npx cypress run --spec cypress/integration/webdriver-uni/* --headed --record --key 0cca5032-798f-468c-bc2a-558e73a72797 --parallel --browser chrome --headed",
-    "triggerAllTests-cucumberTests": "npx cypress run --spec cypress/integration/features/*.feature --browser chrome ",
+    "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/* --headed",
+    "triggerAllTests-autostore": "npx cypress run --spec cypress/e2e/automation-test-store/*",
+    "triggerAllTests-autostore-dashboard": "npx cypress run --spec cypress/e2e/automation-test-store/* --headed --record --key 0cca5032-798f-468c-bc2a-558e73a72797 --parallel --browser chrome --headed",
+    "triggerAllTests-webdriveruni-dashboard": "npx cypress run --spec cypress/e2e/webdriver-uni/* --headed --record --key 0cca5032-798f-468c-bc2a-558e73a72797 --parallel --browser chrome --headed",
+    "triggerAllTests-cucumberTests": "npx cypress run --spec cypress/e2e/features/*.feature --browser chrome ",
     "triggerAllsmokeTests": "npx cypress-tags run -e TAGS=@smoke --headed chrome",
     "triggerAllregressionTests": "npx cypress-tags run -e TAGS=@regression --headed chrome",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
@@ -28,7 +28,7 @@
   "author": "Deniz Babayaka",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^10.2.0",
+    "cypress": "^10.10.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-multi-reporters": "^1.5.0",
@@ -39,8 +39,7 @@
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.2.0"
   },
-    "cypress-cucumber-preprocessor": {
+  "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   }
- 
 }

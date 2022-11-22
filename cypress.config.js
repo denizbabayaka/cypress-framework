@@ -32,7 +32,9 @@ module.exports = defineConfig({
       on ('file:preprocessor', cucumber())
     },
     baseUrl: 'http://www.webdriveruniversity.com/',
-    specPattern: 'cypress/integration/**/*.{js,jsx,ts,tsx,feature}',
+    specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx,feature}',
+
+    
     
 
   },
