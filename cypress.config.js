@@ -33,6 +33,7 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://www.webdriveruniversity.com/',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx,feature}',
+    
 
     
     

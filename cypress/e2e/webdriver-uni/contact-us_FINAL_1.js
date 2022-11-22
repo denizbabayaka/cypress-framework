@@ -36,7 +36,7 @@ describe("Test Contact Us form via WebdriverUni", () => {
     cy.document().should("have.property", "charset").and("eq", "UTF-8");
     cy.title().should("include", "WebDriver | Contact Us");
     cy.url().should("include", "contactus");
-    //Cypress.env coming from cypress.json file
+    //Cypress.env coming from cypress.json file  other parameters coming from example.json file as data variable
     contact_Us_PO.contactForm_Submission(Cypress.env("first_name"), data.last_name, data.email, "How can I learn Cypress?", "h1", "Thank You for your Message!");
   });
 

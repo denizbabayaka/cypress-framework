@@ -2,8 +2,9 @@
 
 describe("Test Contact Us form via Automation Test Store", () => {
     before(function () {
-        // we are calling our userDetails file hare and assigning it to a variable
+        // we are calling our userDetails file fom fixtures folder hare and assigning it to a variable
         cy.fixture("userDetails").as("user")
+        
 
     })
     it("Should be able to submit a succesfull submission via contact us form", () => {
