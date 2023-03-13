@@ -5,14 +5,14 @@ import AutoStore_Haircare_PO from '../../support/pageObjects/automation-test-sto
 
 
 describe("Add multiple items to basket", () => {
-    // we are initalizing the page objects 
+    // we are initalizing the page objects so we can use them in aech every test block
     const autoStore_Homepage_PO = new AutoStore_Homepage_PO();
     const autoStore_HairCare_PO = new AutoStore_Haircare_PO();
 
 
     before(function () {
 
-        //This fixture method will assign whatever  inside the array at  product.json file
+        //This fixture method will assign whatever  inside the array at  product.json file 
         // to the  data variable 
         cy.fixture('product').then(function (data) {
 
@@ -26,7 +26,7 @@ describe("Add multiple items to basket", () => {
         cy.clearCookies();
         // cy.visit("https://automationteststore.com/");
         // cy.get("a[href*='product/category&path=']").contains("Hair Care").click();
-        //Instead of hard coding we will use our custom methods
+        //Instead of hard coding we will use our custom methods coming from pageclass
         autoStore_Homepage_PO.accessHomePage();
         autoStore_Homepage_PO.clickOn_HairCare_Link();
     });

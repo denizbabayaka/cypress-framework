@@ -35,6 +35,7 @@ describe("Traversing DOM elements in Cypress", () => {
   });
 
   it("nextAll() to get all of the next sibling DOM elements within elements", () => {
+    //code will highlight all the next elements after Tee element
     cy.get('.traversal-drinks-list').contains('Tea').nextAll().should('have.length', '3');
   });
 

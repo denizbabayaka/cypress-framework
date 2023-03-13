@@ -45,3 +45,4 @@ describe("Test Contact Us form via WebdriverUni", () => {
         cy.webdriverUni_ContactForm_Submission('Deniz', 'Babayaka', 'deniz@gmail.com', 'I am learning Cypress', 'h1', 'Thank You for your Message!')
     });
 })
+
