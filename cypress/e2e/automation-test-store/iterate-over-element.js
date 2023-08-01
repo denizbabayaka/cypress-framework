@@ -12,7 +12,7 @@ describe("Iterate over elements", () => {
 
 
         // Iterate over all the elements that have the class of product-name ith each method
-        // and assign name of tjem to $el var  with index number 
+        // and assign name of them to $el var  with index number 
 
         cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {
             cy.log("Index: " + index + " : " + $el.text())
